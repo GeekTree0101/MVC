@@ -1,0 +1,85 @@
+PODS:
+  - Codextended (0.3.0)
+  - MBProgressHUD (1.1.0)
+  - Nimble (8.0.5)
+  - PINCache (3.0.1-beta.6):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
+    - PINCache/Core (= 3.0.1-beta.6)
+  - PINCache/Arc-exception-safe (3.0.1-beta.6):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.6):
+    - PINOperation (~> 1.1.0)
+  - PINOperation (1.1.2)
+  - PINRemoteImage/Core (3.0.0-beta.13):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.13):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.13):
+    - PINCache (= 3.0.1-beta.6)
+    - PINRemoteImage/Core
+  - PromiseKit (6.12.0):
+    - PromiseKit/CorePromise (= 6.12.0)
+    - PromiseKit/Foundation (= 6.12.0)
+    - PromiseKit/UIKit (= 6.12.0)
+  - PromiseKit/CorePromise (6.12.0)
+  - PromiseKit/Foundation (6.12.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.12.0):
+    - PromiseKit/CorePromise
+  - Texture (2.8.1):
+    - Texture/AssetsLibrary (= 2.8.1)
+    - Texture/Core (= 2.8.1)
+    - Texture/MapKit (= 2.8.1)
+    - Texture/Photos (= 2.8.1)
+    - Texture/PINRemoteImage (= 2.8.1)
+    - Texture/Video (= 2.8.1)
+  - Texture/AssetsLibrary (2.8.1):
+    - Texture/Core
+  - Texture/Core (2.8.1)
+  - Texture/MapKit (2.8.1):
+    - Texture/Core
+  - Texture/Photos (2.8.1):
+    - Texture/Core
+  - Texture/PINRemoteImage (2.8.1):
+    - PINRemoteImage/iOS (= 3.0.0-beta.13)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (2.8.1):
+    - Texture/Core
+  - TextureSwiftSupport (1.0.0):
+    - Texture/Core (~> 2.8)
+
+DEPENDENCIES:
+  - Codextended
+  - MBProgressHUD
+  - Nimble
+  - PromiseKit
+  - Texture
+  - TextureSwiftSupport
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Codextended
+    - MBProgressHUD
+    - Nimble
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - PromiseKit
+    - Texture
+    - TextureSwiftSupport
+
+SPEC CHECKSUMS:
+  Codextended: f384271b8694376ad766ddbf2a011efbfdcee905
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
+  PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
+  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
+  PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
+  Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
+  TextureSwiftSupport: ec0c52dd76b3f50f0fff720744ac53b08ab1effb
+
+PODFILE CHECKSUM: 5240ce4110af50e2b962b01e1961476926155855
+
+COCOAPODS: 1.7.1

@@ -3,6 +3,8 @@ import PromiseKit
 import Nimble
 @testable import MVC
 
+// NOTE: Optional Action-State Test
+
 class CardViewControllerTests: XCTestCase {
   
   class SpyCardView: CardView {

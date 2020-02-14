@@ -6,6 +6,8 @@ protocol CardDataStore {
   var card: Card? { get set }
 }
 
+
+
 protocol CardModelLogic: class {
   
   func getArticle() -> Promise<Void>

@@ -6,8 +6,6 @@ protocol CardDataStore {
   var card: Card? { get set }
 }
 
-
-
 protocol CardModelLogic: class {
   
   func getArticle() -> Promise<Void>
@@ -18,10 +16,15 @@ protocol CardModelLogic: class {
 class CardModelController: CardDataStore {
   
   var cardID: Int = -1
+  
+  @Syncronize(value: nil)
   var card: Card?
   
   var service: CardService = .init()
   
+  deinit {
+    _card.unregisterIfNeeds()
+  }
 }
 
 extension CardModelController: CardModelLogic {

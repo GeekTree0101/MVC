@@ -63,6 +63,11 @@ class CardViewController: ASViewController<CardView> {
     self.node.delegate = self
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.refresh()
+  }
+  
   private func setupBarButtonItems() {
     
     self.navigationItem.rightBarButtonItems = [
@@ -105,6 +110,5 @@ extension CardViewController: CardViewActionDelegate {
       .map(on: .main) { self.viewDataController.cardViewData(error: nil) }
       .recover { .value(self.viewDataController.cardViewData(error: $0)) }
       .done { node.render(viewData: $0).setNeedsLayout() }
-      .done { self.coordinateController?.dataSyncronizer() }
   }
 }

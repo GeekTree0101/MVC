@@ -6,16 +6,8 @@ protocol CardCoordinateLogic {
 protocol CardCoordinateDataPassing {
   
   var dataStore: CardDataStore? { get set }
-  var dataDrain: ((CardDataStore?) -> Void)? { get set }
-  func dataSyncronizer()
 }
 
-extension CardCoordinateDataPassing {
-  
-  func dataSyncronizer() {
-    self.dataDrain?(dataStore)
-  }
-}
 
 class CardCoordinateController: CardCoordinateDataPassing {
   
@@ -33,15 +25,6 @@ extension CardCoordinateController: CardCoordinateLogic {
     // Data Passing to data store of child view controller
     
     targetViewController.coordinateController?.dataStore?.card = self.dataStore?.card
-    
-    // Data Drain from data store of child view controller
-    
-    targetViewController.coordinateController?.dataDrain = { [weak self] newData in
-      guard let self = self else { return }
-      self.dataStore?.card = newData?.card
-      self.viewController?.refresh()
-      self.dataSyncronizer()
-    }
     
     // Navigate child view controller
     
